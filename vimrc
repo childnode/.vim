@@ -21,6 +21,27 @@ nnoremap <C-P> :bp<Enter>
 map <F12> :set number!<CR>
 map <C-i> :set encoding=utf8<Enter>
 
+let mapleader = ","
+
+" show invisible characters
+set list
+set listchars=tab:▸\ ,eol:¬
+
+" get rid of F1
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
+" save file when losing focus
+au FocusLost * :wa
+
+" strip all trailing whitespace
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+nnoremap <leader>a :Ack
+
+" fold tag
+nnoremap <leader>ft Vatzf
 
 set confirm
 set mouse=a           " Enable mouse support
