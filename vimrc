@@ -1,13 +1,8 @@
-set runtimepath=~/personal/config/vim/runtime,$VIMRUNTIME
-
-"let g:lookupfile_TagExpr = '"~/.filenametags"'
-"set tags=~/.filenametags
-"set completeopt=menu
-
-
-
-
 set nocompatible      " Don't force vi compatibility
+
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 behave xterm          " Alternative is "mswin"
 
 
