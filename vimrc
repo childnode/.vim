@@ -6,8 +6,6 @@ call pathogen#helptags()
 behave xterm          " Alternative is "mswin"
 
 
-" clear highlighted search results
-nmap <silent> <C-N> :silent noh<CR>
 
 " With the following mapping you can press Q every time you alter something in 
 " a paragraph, and the line-breaks get sorted out. The default meaning of 
@@ -38,7 +36,7 @@ au FocusLost * :wa
 " strip all trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
-nnoremap <leader>a :Ack
+nnoremap <leader>a :Ack 
 
 " fold tag
 nnoremap <leader>ft Vatzf
@@ -59,18 +57,28 @@ set expandtab         " No tabs in the output file!
 set ruler
 set history=50    " keep 50 lines of command line history
 set showcmd   " display incomplete commands
-set incsearch   " do incremental searching
 set shiftwidth=4      " What you get for ^D
 set tabstop=4         " Same as shiftwidth
-set showmatch
-set ignorecase
 set foldmethod=indent
 set foldlevelstart=1 "all folds closed when starting editing
 set vb t_vb=
 set showmatch " show matching brackets
 set mat=5 " how many tenths of a second to blink matching brackets for
-set nohlsearch " do not highlight searched for phrases
+
+" searching
 set incsearch " BUT do highlight as you type you search phrase
+set showmatch
+set hlsearch " do not highlight searched for phrases
+set ignorecase      " make searching case-insensitive
+set smartcase       " make searches with mixed case, case-sensitive
+set gdefault        " always substitute globally
+
+
+" clear highlighted search results
+nnoremap <leader><space> :noh<cr>
+
+set encoding=utf-8
+set cursorline
 
 let perl_extended_vars=1 " highlight advanced perl vars inside strings
 
