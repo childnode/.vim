@@ -6,6 +6,17 @@ call pathogen#helptags()
 behave xterm          " Alternative is "mswin"
 
 
+inoremap jj <ESC>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
 
 " With the following mapping you can press Q every time you alter something in 
 " a paragraph, and the line-breaks get sorted out. The default meaning of 
@@ -20,6 +31,10 @@ map <F12> :set number!<CR>
 map <C-i> :set encoding=utf8<Enter>
 
 let mapleader = ","
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " show invisible characters
 set list
@@ -41,8 +56,19 @@ nnoremap <leader>a :Ack
 " fold tag
 nnoremap <leader>ft Vatzf
 
+
+" save a file with sudo, even if vim wasn't called with sudo
+cmap w!! w !sudo tee % >/dev/null
+
 set confirm
 set mouse=a           " Enable mouse support
+set number            " always show line numbers
+set history=1000         " remember more commands and search history
+set undolevels=1000      " use many muchos levels of undo
+set nobackup
+set noswapfile
+set wildignore=*.swp,*.bak,*.pyc,*.class
+set title                " change the terminal's title
 set nowrap
 set selectmode=key    " to enter visual mode when selecting with mouse
 set ai                " Turn on autoindenting
@@ -54,13 +80,13 @@ set viminfo='20,\"50  " Read/write a .viminfo file, don't store more than 50 lin
 set whichwrap=b,s,<,>,[,] " End of line cursor support
 set nobackup          " Do not create backup files
 set expandtab         " No tabs in the output file!
+set hidden
 set ruler
-set history=50    " keep 50 lines of command line history
 set showcmd   " display incomplete commands
 set shiftwidth=4      " What you get for ^D
 set tabstop=4         " Same as shiftwidth
 set foldmethod=indent
-set foldlevelstart=1 "all folds closed when starting editing
+set foldlevelstart=4 "all folds closed when starting editing
 set vb t_vb=
 set showmatch " show matching brackets
 set mat=5 " how many tenths of a second to blink matching brackets for
@@ -78,7 +104,6 @@ set gdefault        " always substitute globally
 nnoremap <leader><space> :noh<cr>
 
 set encoding=utf-8
-set cursorline
 
 let perl_extended_vars=1 " highlight advanced perl vars inside strings
 
