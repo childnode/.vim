@@ -85,8 +85,8 @@ set ruler
 set showcmd   " display incomplete commands
 set shiftwidth=4      " What you get for ^D
 set tabstop=4         " Same as shiftwidth
-set foldmethod=indent
-set foldlevelstart=4 "all folds closed when starting editing
+"set foldmethod=indent
+"set foldlevelstart=4 "all folds closed when starting editing
 set vb t_vb=
 set showmatch " show matching brackets
 set mat=5 " how many tenths of a second to blink matching brackets for

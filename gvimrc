@@ -1,6 +1,6 @@
 
 colorscheme default
-set guifont=Monaco:h10
+"set guifont=Monaco:h10
 
 set relativenumber
 set colorcolumn=85
