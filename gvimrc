@@ -1,5 +1,5 @@
 
-set lines=65 columns=120
+set lines=65 columns=160
 colorscheme default
 "set guifont=Monaco:h10
 
