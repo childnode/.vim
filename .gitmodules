@@ -13,3 +13,6 @@
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = http://github.com/tpope/vim-unimpaired.git
+[submodule "bundle/kwbdi"]
+	path = bundle/kwbdi
+	url = http://github.com/vim-scripts/kwbdi.vim.git
