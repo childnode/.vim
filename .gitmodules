@@ -16,3 +16,9 @@
 [submodule "bundle/kwbdi"]
 	path = bundle/kwbdi
 	url = http://github.com/vim-scripts/kwbdi.vim.git
+[submodule "bundle/colors-solarized"]
+	path = bundle/colors-solarized
+	url = http://github.com/altercation/vim-colors-solarized.git
+[submodule "autoload/pathogen"]
+	path = autoload/pathogen
+	url = http://github.com/tpope/vim-pathogen.git
