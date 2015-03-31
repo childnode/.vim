@@ -22,3 +22,6 @@
 [submodule "autoload/pathogen"]
 	path = autoload/pathogen
 	url = http://github.com/tpope/vim-pathogen.git
+[submodule "bundle/flake8"]
+	path = bundle/flake8
+	url = https://github.com/nvie/vim-flake8
